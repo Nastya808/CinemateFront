@@ -1,15 +1,10 @@
 import { Link, Outlet } from 'react-router-dom';
-import EmailIcon from '../../Components/Icons/EmailIcon';
 
 const Index = () => {
   return (
     <>
-            <Link to="/register">
-        <button className="social-button email">
-          <EmailIcon />
-          Continue with E-mail
-        </button>
-      </Link>
+          <Link to="/auth" className="link signup-link"> Sign up</Link>
+
       <Outlet />
     </>
   );
