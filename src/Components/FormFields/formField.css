@@ -1,0 +1,21 @@
+.field {
+    background: transparent;
+    border: 1px solid #D5EBE9;
+    border-radius: 5px;
+    padding: 12px;
+    color: #D5EBE9;
+    font-size: 14px;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .field::placeholder {
+    color: #b0d3d2;
+  }
+  
+  .field.error {
+    background-color: #f4b5b5;
+    border: 1px solid #cc4c4c;
+    color: #222;
+  }

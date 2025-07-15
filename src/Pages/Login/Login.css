@@ -1,0 +1,95 @@
+.login-container {
+    max-width: 360px;
+    margin: 80px auto;
+    color: #D5EBE9;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login-title {
+    text-align: center;
+    color: #1E8E95;
+    font-size: 18px;
+    margin-bottom: 24px;
+  }
+  .login-button {
+    background-color: #1E8E95;
+    color: white;
+    font-size: 16px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  
+  .error-message {
+    background-color: transparent;
+    color: #C27B7F;
+    font-size: 13px;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  
+  .message {
+    background-color: transparent;
+    color: #1E8E95;
+    font-size: 13px;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  
+  .input {
+    background: transparent;
+    border: 1px solid #D5EBE9;
+    border-radius: 5px;
+    padding: 12px;
+    color: #D5EBE9;
+    font-size: 14px;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .input.error {
+    background-color: #EFAFAF;
+    color: #284345;
+  }
+  
+  .eye-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  .link {
+    color: #46C2D3;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .password-link {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  .signup-text {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #D5EBE9;
+    text-align: center;
+  }
+  
+  .signup-link {
+    margin-left: 5px;
+  }
+  
+  

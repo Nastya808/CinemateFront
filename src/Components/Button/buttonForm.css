@@ -1,0 +1,10 @@
+.regestration {
+    width: 29vw;
+    margin: 0 auto;
+    padding-block: 0;
+    padding-inline: 0;
+    border-width: 0;
+    background-color: var(--button-background-color);
+    border-radius: var(--boredr-radius-field-form);
+    border: var(--border-size-field) solid var(--Border-color-field-form-reg);
+}

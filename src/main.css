@@ -1,0 +1,27 @@
+:root {
+    --Border-color-field-form-reg: #E7EFF1;
+    --background-color-form-reg: #284345;
+    --boredr-radius-form-reg: 2vh;
+
+    --border-size-field: 0.1vh;
+    --boredr-radius-field-form: 1vh;
+
+    --button-background-color: #45C2D3;
+}
+
+
+html,
+body {
+
+    height: 100vh;
+    align-content: center;
+    margin: 0;
+
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    align-content: center;
+
+}
