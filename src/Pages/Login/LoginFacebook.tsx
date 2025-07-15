@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import FacebookIcon from "../../Components/Icons/FacebookIcon";
 import "./LoginFacebook.css";
+import { Link } from "react-router-dom";
 
 const LoginFacebook = () => {
   const [user, setUser] = useState<any | null>(null);
@@ -38,7 +39,7 @@ const LoginFacebook = () => {
       <div className="alt-links">
         <a href="#" className="link">Not you? <strong>Use another account</strong></a>
         <p className="signup">
-          Don’t have an account? <a className="link" href="/register">Sign up</a>
+        Don’t have an account? <Link to="/auth" className="link signup-link"> Sign up</Link>
         </p>
       </div>
     </div>
