@@ -1,4 +1,4 @@
-import "./Fields.css";
+import "./formField.css";
 
 const Fields = (props: any) => {
   const { registerFormHook, placeholder, type, hasError } = props;
