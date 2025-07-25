@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import EyeIcon from "../../Components/Icons/EyeIcon";
 import { useState } from "react";
 import { useLang } from "../../Hooks/useLang";
-import "../../main.css"
 
 type FormData = {
   email: string;

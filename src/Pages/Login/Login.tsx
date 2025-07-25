@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import "./Login.css";
 import EyeIcon from "../../Components/Icons/EyeIcon";
@@ -25,6 +26,7 @@ const Login = () => {
     }
   });
 
+  const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
   const [message, setMessage] = useState("");
   const [hasError, setHasError] = useState(false);
@@ -32,11 +34,12 @@ const Login = () => {
   const onSubmit = (data: LoginData) => {
     const users: User[] = JSON.parse(localStorage.getItem("users") || "[]");
     const found = users.find((u) => u.email === data.email && u.password === data.password);
-
+  
     if (found) {
       setMessage("Login successful!");
       setHasError(false);
       localStorage.setItem("currentUser", JSON.stringify(found));
+      navigate("/home");
     } else {
       setHasError(true);
       setMessage("Wrong e-mail or password.");
@@ -64,8 +67,8 @@ const Login = () => {
               message: "Invalid email format"
             }
           })}
-          hasError={!!errors.email || hasError}
-        />
+          hasError={!!errors.email}
+          />
         {errors.email && <p className="error-message">{errors.email.message}</p>}
       </div>
 
@@ -82,7 +85,7 @@ const Login = () => {
                 message: "Minimum 6 characters"
               }
             })}
-            hasError={!!errors.password || hasError}
+            hasError={!!errors.password}
           />
           <span className="eye-icon" onClick={() => setShowPassword(!showPassword)}>
             <EyeIcon isVisible={showPassword} />

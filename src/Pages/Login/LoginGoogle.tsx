@@ -3,6 +3,7 @@ import GoogleIcon from "../../Components/Icons/GoogleIcon";
 import "./LoginGoogle.css";
 import { Link } from "react-router-dom";
 
+
 const LoginGoogle = () => {
   const [user, setUser] = useState<any | null>(null);
 
@@ -38,8 +39,7 @@ const LoginGoogle = () => {
       <div className="alt-links">
         <a href="#" className="link">Not you? <strong>Use another account</strong></a>
         <p className="signup">
-          Don’t have an account? <Link to="/auth" className="link signup-link"> Sign up</Link>
-
+        Don’t have an account? <Link to="/auth" className="link signup-link"> Sign up</Link>
         </p>
       </div>
     </div>

@@ -1,0 +1,50 @@
+.footage {
+    width: 100%;
+    background-color: #000;
+    color: #aaa;
+    font-size: 14px;
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .footage p {
+    margin: 0;
+    font-weight: 500;
+  }
+  
+  .footage-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 20px;
+  }
+  
+  .footage-col {
+    flex: 1 1 180px;
+    max-width: 220px;
+  }
+  
+  .footage-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footage-col li {
+    margin-bottom: 12px;
+  }
+  
+  .footage a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footage a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+  

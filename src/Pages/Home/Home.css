@@ -1,0 +1,259 @@
+.home-page {
+  background-color: black;
+  color: white;
+  font-family: sans-serif;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
+}
+
+.top-banner {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  background-image: url("/banner.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 60px 60px;
+}
+
+.overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  padding-left: 60px;
+  padding-bottom: 40px;
+  width: 100%;
+}
+
+.top-heading {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+
+.home-page {
+  background-color: black;
+  color: white;
+  font-family: sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-banner {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  background-image: url("/banner.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 60px 60px;
+}
+
+.overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  padding-left: 60px;
+  padding-bottom: 40px;
+  width: 100%;
+}
+
+.top-heading {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+
+.main-content {
+  padding: 0 60px 40px;
+  flex-grow: 1; 
+  display: flex;
+  flex-direction: column;
+}
+
+
+.carousel-section {
+  margin: 40px 60px;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+}
+
+
+.carousel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.carousel-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+}
+
+.genre-filter {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  border-radius: 4px;
+  padding: 6px 10px;
+  font-size: 14px;
+}
+
+.carousel {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.carousel img {
+  width: 280px;
+  height: 160px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+
+
+.section-divider {
+  border: none;
+  border-top: 1px solid #444;
+  margin: 20px 0;
+}
+
+.genres-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+  padding: 0 60px 60px;
+}
+
+.genre-tile {
+  background-color: #222;
+  border-radius: 8px;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+
+
+
+.carousel-section {
+  margin: 40px 60px;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+}
+
+
+.carousel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.carousel-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+}
+
+.genre-filter {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  border-radius: 4px;
+  padding: 6px 10px;
+  font-size: 14px;
+}
+
+.carousel {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.carousel img {
+  width: 280px;
+  height: 160px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+
+
+.section-divider {
+  border: none;
+  border-top: 1px solid #444;
+  margin: 20px 0;
+}
+
+.genres-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 плитки в ряд */
+  gap: 40px; /* расстояние как в Figma */
+  margin-top: 40px;
+  padding: 0 60px 60px;
+  justify-items: center;
+}
+
+.genre-tile {
+  width: 100%;
+  max-width: 480px;
+  aspect-ratio: 16 / 9;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.genre-tile:hover {
+  transform: scale(1.02);
+}
+
+.genre-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+}
+
+
+
+
+.genre-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0.6;
+}
+
+.genre-label {
+  position: relative;
+  z-index: 2;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px;
+  text-align: center;
+}

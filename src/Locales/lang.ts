@@ -22,7 +22,26 @@ export const translations = {
       submit: "Sign up",
       alreadyHaveAccount: "Already have an account?",
       login: "Log in"
-    }
+    },
+
+    start: {
+      signIn: "Sign in",
+      heading: "Unlimited movies, TV shows, and more",
+      text1: "Watch anywhere. Cancel anytime.",
+      text2: "Ready to watch? Let’s get started!",
+      getStarted: "Get Started ➤",
+      enjoyHeading: "Enjoy on your TV",
+      enjoyText: "Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more..",
+      watchHeading: "Watch everywhere",
+      watchText: "Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.",
+      kidsHeading: "Create profiles for kids",
+      kidsText: "Send kids on adventures with their favorite characters in a space made just for them - free.",
+      downloadHeading: "Download your shows to watch offline",
+      downloadText: "Watch on a plane, train, or submarine...",
+      preferencesHeading: "Let’s find your preferences!",
+      preferencesBtn: "Get Started ➤"
+    },
+    langs: ["English", "Русский"]
   },
 
   ru: {
@@ -46,6 +65,26 @@ export const translations = {
       submit: "Зарегистрироваться",
       alreadyHaveAccount: "Уже есть аккаунт?",
       login: "Войти"
-    }
-  }
+    },
+    start: {
+      signIn: "Войти",
+      heading: "Неограниченные фильмы, сериалы и многое другое",
+      text1: "Смотрите где угодно. Отменить можно в любой момент.",
+      text2: "Готовы смотреть? Тогда начнём!",
+      getStarted: "Начать ➤",
+      enjoyHeading: "Смотрите на ТВ",
+      enjoyText: "Смотрите на смарт-ТВ, Playstation, Xbox, Chromecast, Apple TV, Blu-ray плеерах и других устройствах.",
+      watchHeading: "Смотрите где угодно",
+      watchText: "Смотрите неограниченно на телефоне, планшете, ноутбуке и ТВ.",
+      kidsHeading: "Создайте профиль для детей",
+      kidsText: "Отправьте детей в путешествия с любимыми героями в пространстве, созданном только для них — бесплатно.",
+      downloadHeading: "Скачивайте и смотрите офлайн",
+      downloadText: "Смотрите в самолёте, поезде или подводной лодке...",
+      preferencesHeading: "Давайте узнаем ваши предпочтения!",
+      preferencesBtn: "Начать ➤"
+    },
+    langs: ["English", "Русский"]
+  },
+
+  
 };

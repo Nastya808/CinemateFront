@@ -1,0 +1,186 @@
+.start-page {
+    background-color: black;
+    color: white;
+    margin: 0;
+    font-family: sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  
+  .start-page .divider {
+    border: none;
+    border-radius: 20px;
+    border-top: 8px solid gray;
+    margin: 30px 0;
+  }
+  
+  .start-page .start-section {
+    min-height: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+  }
+  
+  .start-page .start-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    height: 92px;
+  }
+  
+  
+  .start-page .title {
+    font-family: 'Courier New', monospace;
+    font-size: 32px;
+    color: #00f0ff;
+  }
+  
+  .start-page .btns {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-left: auto;
+  }
+
+  .start-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    height: 92px;
+  }
+  
+  .sign-in {
+    background: #1E8E95;
+    height: 36px;
+    padding: 0 16px;
+    border: none;
+    border-radius: 4px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap; 
+  }
+  
+  
+  .start-page .lang-select {
+    background: #000;
+    color: rgb(255, 255, 255);
+    padding: 0.4rem 0.6rem;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .start-page .lang-select option {
+    background: black;
+    color: white;
+  }
+  
+  .start-page .sign-in {
+    background: #1E8E95;
+    height: 32px;
+    width: 85px;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .start-page .start-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    flex-direction: column;
+  }
+  
+  .start-page .main-text {
+    font-size: 46px;
+    font-weight: bold;
+  }
+  
+  .start-page .text2 {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    width: 400px;
+  }
+  
+  .start-page .text3 {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    color: #ccc;
+  }
+  
+  .start-page .get-started {
+    margin-top: 2rem;
+    padding: 1rem;
+    font-size: 1rem;
+    background-color: #24C0C9;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 202px;
+    height: 56px;
+  }
+  
+  .start-page .block {
+    width: 80%;
+    max-width: 1104px;
+    height: 413px;
+    margin-left: 80px;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .start-page .image {
+    width: 546px;
+    height: 409px;
+  }
+  
+  .start-page .imageCosmo {
+    width: 1104px;
+    height: 413px;
+  }
+  
+  .start-page .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    flex-direction: column;
+  }
+  
+  .start-page .bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    flex-direction: column;
+  }
+  
+  .start-page * {
+    box-sizing: border-box;
+  }
+  
