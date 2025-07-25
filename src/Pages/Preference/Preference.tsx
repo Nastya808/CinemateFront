@@ -4,7 +4,7 @@ import './pref.css';
 
 
 const Preference: React.FC = () => {
-    const [data, setData] = useState({
+    const [data] = useState({
 
         heading: "Take a quick quiz to tell us your preferences",
         heading2: "Choose genres that you prefer",
