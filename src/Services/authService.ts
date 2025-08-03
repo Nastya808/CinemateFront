@@ -5,29 +5,6 @@ interface User {
     avatar?: string;
   }
   
-  // Регистрация пользователя
-  export const register = async (email: string, password: string): Promise<{ success: boolean; message: string }> => {
-    const users = JSON.parse(localStorage.getItem('users') || '[]');
-    const exists = users.some((u: User) => u.email === email);
-    if (exists) {
-      return { success: false, message: 'User already exists' };
-    }
-    users.push({ email, password });
-    localStorage.setItem('users', JSON.stringify(users));
-    return { success: true, message: 'Registered successfully' };
-  };
-  
-  // Вход по email и паролю
-  export const login = async (email: string, password: string): Promise<{ success: boolean; user?: User; message: string }> => {
-    const users = JSON.parse(localStorage.getItem('users') || '[]');
-    const user = users.find((u: User) => u.email === email && u.password === password);
-    if (!user) {
-      return { success: false, message: 'Invalid email or password' };
-    }
-    localStorage.setItem("currentUser", JSON.stringify(user));
-    return { success: true, user, message: 'Login successful' };
-  };
-  
   // Вход через Facebook
   export const loginWithFacebook = async (): Promise<User> => {
     // TODO: Replace this with real Facebook OAuth login
@@ -41,15 +18,14 @@ interface User {
   };
   
   // Вход через Google
-  export const loginWithGoogle = async (): Promise<User> => {
-    const user: User = {
-      name: "Nicolas",
-      email: "newuser234@gmail.com",
-      avatar: "/avatar1.png"
-    };
-    localStorage.setItem("currentUser", JSON.stringify(user));
-    return user;
+  export const loginWithGoogle = async (email: string): Promise<void> => {
+    await fetch("http://localhost:5219/api/Auth/external-login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email }),
+    });
   };
+  
   
   // Получить текущего пользователя
   export const getCurrentUser = (): User | null => {

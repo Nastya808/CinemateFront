@@ -2,6 +2,7 @@ import "./Home.css";
 import { mockSections, mockGenres } from "./mockData";
 
 const Home = () => {
+  
   return (
     <div className="home-page">
       <header className="top-banner">
@@ -17,12 +18,15 @@ const Home = () => {
               <div className="carousel-header">
                 <h3 className="carousel-title">{section.title}</h3>
                 {index === 0 && (
-                  <select className="genre-filter">
-                    <option>Filter by genre</option>
-                    <option>Action</option>
-                    <option>Drama</option>
-                  </select>
-                )}
+  <div className="genre-filter-wrapper">
+    <select className="genre-filter">
+      <option>Filter by genre</option>
+      <option>Action</option>
+      <option>Drama</option>
+    </select>
+  </div>
+)}
+
               </div>
               <div className="carousel">
                 {section.images.map((img, i) => (

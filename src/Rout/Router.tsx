@@ -9,6 +9,7 @@ import LoginFacebook from "../Pages/Login/LoginFacebook";
 import LoginGoogle from "../Pages/Login/LoginGoogle";
 import Preference from "../Pages/Preference/Preference";
 import Home from "../Pages/Home/Home";
+import News from "../Pages/News/News";
 
 export const router = createBrowserRouter([
   {
@@ -27,6 +28,7 @@ export const router = createBrowserRouter([
     children: [
       { path: "/home", element: <Home /> },
       { path: "/preference", element: <Preference /> },
+      { path: "/news", element: <News /> },
     ],
   },
 ]);

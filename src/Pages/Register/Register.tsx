@@ -1,6 +1,5 @@
 import { useForm } from "react-hook-form";
 import "./Register.css";
-import { register as registerUser } from "../../Services/authService";
 import Fields from "../../Components/FormFields/FormField";
 import { Link } from "react-router-dom";
 import EyeIcon from "../../Components/Icons/EyeIcon";
@@ -35,10 +34,32 @@ const Register = () => {
   const [showRepeatPassword, setShowRepeatPassword] = useState(false);
 
   const onSubmit = async (data: FormData) => {
-    const result = await registerUser(data.email, data.password);
-    setMessage(result.message);
-    setHasError(!result.success);
+    try {
+      const response = await fetch("http://localhost:5219/api/Auth/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: data.email,
+          password: data.password,
+        }),
+      });
+  
+      if (response.ok) {
+        setMessage("Registration successful");
+        setHasError(false);
+      } else {
+        const result = await response.json();
+        setMessage(result.message || "Registration failed");
+        setHasError(true);
+      }
+    } catch (error) {
+      setMessage("Server error");
+      setHasError(true);
+    }
   };
+  
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="auth-page">

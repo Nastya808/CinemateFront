@@ -7,12 +7,6 @@ import { useState } from "react";
 import Fields from "../../Components/FormFields/FormField";
 import "../../main.css"
 
-
-interface User {
-  email: string;
-  password: string;
-}
-
 type LoginData = {
   email: string;
   password: string;
@@ -31,20 +25,32 @@ const Login = () => {
   const [message, setMessage] = useState("");
   const [hasError, setHasError] = useState(false);
 
-  const onSubmit = (data: LoginData) => {
-    const users: User[] = JSON.parse(localStorage.getItem("users") || "[]");
-    const found = users.find((u) => u.email === data.email && u.password === data.password);
+  const onSubmit = async (data: LoginData) => {
+    try {
+      const response = await fetch("http://localhost:5219/api/Auth/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
   
-    if (found) {
-      setMessage("Login successful!");
-      setHasError(false);
-      localStorage.setItem("currentUser", JSON.stringify(found));
-      navigate("/home");
-    } else {
+      if (response.ok) {
+        const result = await response.json();
+        setMessage(result.message || "Login successful");
+        setHasError(false);
+        navigate("/home");
+      } else {
+        const result = await response.json();
+        setMessage(result.message || "Login failed");
+        setHasError(true);
+      }
+    } catch (error) {
+      setMessage("Server error");
       setHasError(true);
-      setMessage("Wrong e-mail or password.");
     }
   };
+  
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="login-container">

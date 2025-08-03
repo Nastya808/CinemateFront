@@ -3,34 +3,46 @@ import GoogleIcon from "../../Components/Icons/GoogleIcon";
 import FacebookIcon from "../../Components/Icons/FacebookIcon";
 import EmailIcon from "../../Components/Icons/EmailIcon";
 import { Link, useNavigate } from "react-router-dom";
-import { loginWithFacebook, loginWithGoogle } from "../../Services/authService";
+import { loginWithGoogle } from "../../Services/authService";
+import { useGoogleLogin } from "@react-oauth/google";
+import axios from "axios";
 
 const ChooseMethod = () => {
   const navigate = useNavigate();
 
-  const handleFacebookLogin = async () => {
-    try {
-      await loginWithFacebook();
-      navigate("/login-facebook");
-    } catch (error) {
-      console.error("Facebook login failed:", error);
-    }
-  };
+  const googleLogin = useGoogleLogin({
+    onSuccess: async (tokenResponse) => {
+      try {
+        const googleRes = await axios.get("https://www.googleapis.com/oauth2/v3/userinfo", {
+          headers: {
+            Authorization: `Bearer ${tokenResponse.access_token}`,
+          },
+        });
 
-  const handleGoogleLogin = async () => {
-    try {
-      await loginWithGoogle();
-      navigate("/login-google");
-    } catch (error) {
-      console.error("Google login failed:", error);
-    }
+        const email = googleRes.data.email;
+
+        // Отправка email на backend
+        await loginWithGoogle(email);
+
+        // Перенаправление
+        navigate("/login-google");
+      } catch (err) {
+        console.error("Google login failed", err);
+      }
+    },
+    onError: (error) => console.error("Google login error", error),
+  });
+
+  const handleFacebookLogin = () => {
+    // Заглушка, пока не реализован Facebook OAuth
+    alert("Facebook login not implemented yet.");
   };
 
   return (
     <div className="auth-choice-container">
       <h2 className="choice-title">Create an account</h2>
 
-      <button className="social-button google" onClick={handleGoogleLogin}>
+      <button className="social-button google" onClick={() => googleLogin()}>
         <GoogleIcon />
         Continue with Google
       </button>
@@ -54,8 +66,7 @@ const ChooseMethod = () => {
 
       <p className="terms-text">
         By continuing, you agree to Mastersoftcloud Company’s
-        <span className="link"> Terms of Use </span>
-        and
+        <span className="link"> Terms of Use </span> and
         <span className="link"> Privacy Policy</span>.
       </p>
     </div>

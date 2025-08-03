@@ -41,6 +41,21 @@ export const translations = {
       preferencesHeading: "Let’s find your preferences!",
       preferencesBtn: "Get Started ➤"
     },
+    home: {
+      topHeading: "New top content here",
+      filterByGenre: "Filter by genre",
+      genres: {
+        action: "Action",
+        drama: "Drama"
+      },
+      sections: {
+        continue: "Continue watching",
+        recommendations: "Recommendations for you",
+        detectives: "Top detectives of this year",
+        killers: "Top killers of this year",
+        horrors: "Top horrors of this year"
+      }      
+    },    
     langs: ["English", "Русский"]
   },
 
@@ -83,6 +98,21 @@ export const translations = {
       preferencesHeading: "Давайте узнаем ваши предпочтения!",
       preferencesBtn: "Начать ➤"
     },
+    home: {
+      topHeading: "Новинки для вас",
+      filterByGenre: "Сортировать по жанру",
+      genres: {
+        action: "Боевик",
+        drama: "Драма"
+      },
+      sections: {
+        continue: "Продолжить просмотр",
+        recommendations: "Рекомендации для вас",
+        detectives: "Лучшие детективы этого года",
+        killers: "Лучшие триллеры года",
+        horrors: "Лучшие ужасы этого года"
+      }      
+    },    
     langs: ["English", "Русский"]
   },
 

@@ -1,12 +1,18 @@
 html, body, #root {
   height: 100%;
   background-color: #284345;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
   
   /* Основная форма */
   .auth-page {
     height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
     background-color: #284345;
     min-height: 100vh;
     max-width: 360px;
